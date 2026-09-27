@@ -1,5 +1,5 @@
 // Design tokens for DeskcommCRM showcase.
-// "Soft-tech / calmo" — neutros desaturados (greige/warm-gray), accent não-saturado.
+// Identidade Troca Fácil — preto/grafite com amarelo #ffcc00.
 // 5-Constraint Rule applied: Shape, Color (exact hex), Typography, Motion, Layout.
 
 export type PaletteId = "sage" | "clay" | "mist" | "plum" | "olive";
@@ -40,30 +40,30 @@ export type PaletteDef = {
 export const PALETTES: Record<PaletteId, PaletteDef> = {
   sage: {
     id: "sage",
-    name: "Sage",
-    description: "Verde-erva desaturado. Calmo, confiável, vegetal.",
+    name: "Troca Fácil",
+    description: "Preto e grafite com amarelo institucional #ffcc00.",
     accent: {
-      50: "#f3f6f1", 100: "#e4ebe0", 200: "#c8d6c1", 300: "#a4ba9a",
-      400: "#82a077", 500: "#67885d", 600: "#506d48", 700: "#41573b",
-      800: "#374731", 900: "#2f3c2b", 950: "#171f15",
+      50: "#fffbea", 100: "#fff3b8", 200: "#ffe66d", 300: "#ffda33",
+      400: "#ffcf0a", 500: "#ffcc00", 600: "#e6b800", 700: "#b88f00",
+      800: "#806500", 900: "#4d3d00", 950: "#241c00",
     },
     neutralLight: {
-      50: "#faf9f6", 100: "#f3f1ec", 200: "#e7e3da", 300: "#d2cdbf",
-      400: "#a9a395", 500: "#7d786c", 600: "#5d594f", 700: "#46433b",
-      800: "#2e2c26", 900: "#1c1a16", 950: "#0e0d0a",
+      50: "#f7f7f7", 100: "#e7e7e7", 200: "#c7c7c7", 300: "#9f9f9f",
+      400: "#737373", 500: "#555555", 600: "#3a3a3a", 700: "#242424",
+      800: "#151515", 900: "#0d0d0d", 950: "#050505",
     },
     neutralDark: {
-      50: "#f5f4ef", 100: "#e6e4dc", 200: "#bbb8ac", 300: "#8e8b7f",
-      400: "#605e54", 500: "#444239", 600: "#33312a", 700: "#272620",
-      800: "#1d1c17", 900: "#161510", 950: "#0c0b08",
+      50: "#f7f7f7", 100: "#e7e7e7", 200: "#c7c7c7", 300: "#9f9f9f",
+      400: "#737373", 500: "#555555", 600: "#3a3a3a", 700: "#242424",
+      800: "#151515", 900: "#0d0d0d", 950: "#050505",
     },
     states: {
       light: { success: "#5a8a5f", warning: "#b07a2b", error: "#a94a3c", info: "#4a7a93" },
       dark:  { success: "#82a077", warning: "#d09455", error: "#c87263", info: "#7da9bf" },
     },
     surfaces: {
-      light: { bg: "#faf9f6", surface: "#ffffff", surfaceElevated: "#f5f3ee", text: "#1c1a16", textMuted: "#5d594f", border: "#e7e3da" },
-      dark:  { bg: "#161510", surface: "#1d1c17", surfaceElevated: "#272620", text: "#f5f4ef", textMuted: "#8e8b7f", border: "#33312a" },
+      light: { bg: "#050505", surface: "#0d0d0d", surfaceElevated: "#151515", text: "#f7f7f7", textMuted: "#9f9f9f", border: "#242424" },
+      dark:  { bg: "#050505", surface: "#0d0d0d", surfaceElevated: "#151515", text: "#f7f7f7", textMuted: "#9f9f9f", border: "#242424" },
     },
   },
   clay: {
@@ -208,11 +208,11 @@ export const TYPOS: Record<TypoId, { name: string; display: string; body: string
     scale: 1.333,
   },
   "atkinson": {
-    name: "Atkinson Hyperlegible",
-    display: 'var(--font-atkinson), system-ui, sans-serif',
-    body: 'var(--font-atkinson), system-ui, sans-serif',
+    name: "Troca Fácil System",
+    display: 'Arial, "Helvetica Neue", Helvetica, system-ui, sans-serif',
+    body: 'Arial, "Helvetica Neue", Helvetica, system-ui, sans-serif',
     mono: 'var(--font-jetbrains), ui-monospace, monospace',
-    description: "Acessibilidade-first. Glifos diferenciados, mesma família display+body.",
+    description: "Sans direta e densa, alinhada ao sistema de estoque Troca Fácil.",
     scale: 1.2,
   },
   "source-plex": {
