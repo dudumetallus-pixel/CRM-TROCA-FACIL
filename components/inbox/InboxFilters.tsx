@@ -276,6 +276,9 @@ export function InboxFilters({ value, onChange }: Props) {
 
   return (
     <div className="border-b border-border bg-background">
+      <div className="px-3 pt-4 md:hidden">
+        <h1 className="text-2xl font-bold tracking-tight text-foreground">{t("Conversas")}</h1>
+      </div>
       <div className="space-y-2 px-3 pt-3 pb-2">
         <div className="flex items-center gap-2">
           <div className="relative min-w-0 flex-1">
