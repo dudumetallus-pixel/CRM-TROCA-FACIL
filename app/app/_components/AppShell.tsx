@@ -1,6 +1,8 @@
 "use client";
 import type { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import { Sidebar } from "@/components/shell/Sidebar";
+import { MobileSalesNav } from "@/components/shell/MobileSalesNav";
 import { TopBar } from "@/components/shell/TopBar";
 import { BarraDeProgressoNavegacao } from "@/components/shell/BarraDeProgressoNavegacao";
 import { useSinalDePresenca } from "@/hooks/atendimento/useSinalDePresenca";
@@ -25,6 +27,8 @@ interface AppShellProps {
 }
 
 export function AppShell({ sidebarCollapsed, podeAtender, children }: AppShellProps) {
+  const pathname = usePathname();
+  const inbox = pathname === "/app/inbox" || pathname.startsWith("/app/inbox/");
   useInboundMessageAlerts();
   useInboundCallAlerts();
   useCrmAlerts();
@@ -77,13 +81,16 @@ export function AppShell({ sidebarCollapsed, podeAtender, children }: AppShellPr
           aparece no inspetor quando alguém pergunta quanto o rodapé perdeu.
         */}
         <main
-          className="flex-1 overflow-auto p-6"
+          className={inbox
+            ? "min-h-0 flex-1 overflow-auto p-0 md:p-6"
+            : "min-h-0 flex-1 overflow-auto px-4 pt-4 pb-20 md:p-6"}
           style={estiloDaReserva(ocupacaoDoRodape)}
           data-rodape-ocupado={ocupacaoDoRodape}
         >
           {children}
         </main>
       </div>
+      <MobileSalesNav />
     </div>
   );
 }
